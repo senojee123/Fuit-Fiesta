@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>Fruit Slice</title>
+<link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+<div id="game-root">
+  <canvas id="game-canvas"></canvas>
+
+  <!-- HUD (shown during gameplay) -->
+  <div id="hud" class="hidden">
+    <div class="hud-pill">⭐ <span id="hud-score">0</span></div>
+    <div class="hud-pill">⏱ <span id="hud-timer">60</span>s</div>
+    <div class="hud-pill" id="hud-lives">❤❤❤</div>
+  </div>
+  <div id="hud-combo" class="hidden"></div>
+
+  <!-- Start screen -->
+  <div id="start-screen" class="screen">
+    <img id="game-logo" src="" alt="logo" style="display:none" />
+    <h1 id="game-title">Fruit Slice</h1>
+    <p id="org-name"></p>
+    <button id="play-btn" class="btn">▶ Play</button>
+  </div>
+
+  <!-- End screen -->
+  <div id="end-screen" class="screen hidden">
+    <div class="panel">
+      <h2>Game Over</h2>
+      <div id="final-score">0</div>
+      <p id="reward-message"></p>
+      <img id="reward-badge" src="" alt="badge" />
+      <div id="qr-wrap" class="hidden"></div>
+      <p id="coupon-code" class="hidden"></p>
+      <div class="end-actions">
+        <button id="replay-btn" class="btn">🔁 Replay</button>
+        <button id="share-btn" class="btn secondary">📤 Share</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="src/config/gameConfig.js"></script>
+<script src="src/physics.js"></script>
+<script src="src/collision.js"></script>
+<script src="src/particles.js"></script>
+<script src="src/scoring.js"></script>
+<script src="src/inputHandler.js"></script>
+<script src="src/ui.js"></script>
+<script src="src/gameEngine.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
